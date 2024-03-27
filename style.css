@@ -24,7 +24,6 @@ body {
   height: auto;
   background-color: #00d650;
   position: relative;
-  border: 1px solid red;
 }
 
 .header {
@@ -109,21 +108,26 @@ body {
 .main-container {
   max-width: 1440px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid red;
 }
 
 .homeContainer {
+  width: 100%;
   display: flex;
+  flex-flow: wrap;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid black;
 }
 
 .left-content {
-  flex-basis: 50%;
+  width: 50%;
+  border: 1px solid red;
 }
 .cashAppLogo {
   max-width: 500px;
@@ -156,8 +160,9 @@ body {
 }
 
 .right-content {
-  flex-basis: 50%;
+  width: 50%;
   position: relative;
+  border: 1px solid red;
 }
 
 .baner {
@@ -227,30 +232,17 @@ body {
 /* responsive main container  */
 
 @media screen and (max-width: 767px) {
-  .container {
-    height: 100vh;
-    overflow: hidden;
-  }
-  .main-container {
-    height: calc(100vh - 90px);
-    align-items: center;
-  }
-
   .homeContainer {
-    flex-direction: column;
+    display: block;
   }
-
   .left-content {
-    flex-basis: 95%;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
   }
   .right-content {
-    flex-basis: 90%;
-    border: 1px solid red;
+    width: 90%;
+    margin: 10px auto;
   }
 }
 
