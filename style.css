@@ -18,19 +18,26 @@ body {
   overflow: hidden;
 }
 
+.section {
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
-  height: auto;
-  background-color: #00d650;
-  position: relative;
+  background-color: #23ba5b;
+  overflow: hidden;
 }
 
 .header {
   max-width: 1440px;
   width: 100%;
   margin: 0px auto;
-  padding: 10px 0;
+  height: 70px;
   position: sticky;
   top: 0;
 }
@@ -90,13 +97,17 @@ body {
 @media screen and (max-width: 767px) {
   .bars {
     display: block;
+    z-index: 999;
   }
   .ul {
     flex-direction: column;
     position: absolute;
     top: -300px;
-
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
     transition: 1s;
+    z-index: 20;
   }
   .ul li {
     margin: 10px 0;
@@ -106,67 +117,62 @@ body {
 /* main-container */
 
 .main-container {
-  max-width: 1440px;
-  width: 100%;
-  height: calc(100vh);
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .homeContainer {
   width: 100%;
   display: flex;
-  flex-flow: wrap;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
 }
 
 .left-content {
-  width: 50%;
-  border: 1px solid red;
+  width: 45%;
 }
-.cashAppLogo {
-  max-width: 500px;
+
+.logo {
+  max-width: 550px;
+  width: 100%;
+}
+
+.logo img {
   width: 100%;
 }
 
 .left-content p {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffff;
-  margin: 15px 0;
+  font-size: 2rem;
+  color: #fff;
+  margin: 20px 0;
 }
 
 .cashBtn {
   max-width: 500px;
   width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
+  height: 35px;
   color: #008000;
+  border: none;
+  border-radius: 10px;
   font-size: 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.5s;
+  background-color: #ffffff;
 }
 
 .cashBtn:hover {
-  background-color: #054705;
-  color: #fff;
+  background-color: #bfdabf;
 }
 
 .right-content {
-  width: 50%;
+  width: 45%;
   position: relative;
-  border: 1px solid red;
 }
 
-.baner {
-  max-width: 700px;
+.heroImg {
+  width: 100%;
+}
+
+.heroImg img {
   width: 100%;
 }
 
@@ -184,126 +190,148 @@ body {
 }
 
 .icon1 {
-  top: 25%;
-  animation: animation1 2s 0.5s infinite;
+  top: 50%;
+  left: 25%;
+  animation: dollar 1s linear 1s infinite;
 }
-
 .icon2 {
-  bottom: 0;
-  animation: animation1 2s 0.5s infinite;
-}
-
-.icon3 {
-  top: 0;
+  top: 50%;
   left: 50%;
-  animation: animation1 2s 0.5s infinite;
+  animation: dollar 1s linear 2s infinite;
 }
-
-.icon4 {
-  right: 25%;
+.icon3 {
   top: 25%;
-  animation: animation1 2s 0.5s infinite;
+  right: 25%;
+  animation: dollar 1s linear 4s infinite;
+}
+.icon4 {
+  bottom: 30%;
+  right: 60%;
+  animation: dollar 1s linear 3s infinite;
 }
 .icon5 {
-  bottom: 50%;
-  left: 50%;
-  animation: animation1 2s 0.5s infinite;
+  top: 50%;
+  left: 10%;
+  animation: dollar 1s linear 5s infinite;
 }
 .icon6 {
-  right: 0;
-  bottom: 0;
-  animation: animation1 2s 0.5s infinite;
+  top: 40%;
+  left: 20%;
+  animation: dollar 1s linear 6s infinite;
 }
 .icon7 {
-  left: 0;
-  top: 50%;
-  animation: animation1 2s 0.5s infinite;
+  bottom: 20%;
+  left: 25%;
+  animation: dollar 1s linear 4s infinite;
 }
 
-@keyframes animation1 {
-  0% {
+@keyframes dollar {
+  from {
     opacity: 0;
   }
-
-  100% {
+  to {
     opacity: 1;
   }
 }
-/* responsive main container  */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .homeContainer {
     display: block;
   }
   .left-content {
     width: 90%;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
   }
   .right-content {
     width: 90%;
-    margin: 10px auto;
+    margin: 25px auto;
+  }
+  .heroImg img {
+    height: 100%;
+  }
+  .priceImg {
+    width: 30px;
+    height: 20px;
   }
 }
 
-/* how it work  */
 .workContainer {
-  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  margin: 0px auto;
 }
 
 .title {
-  font-size: 30px;
-  color: #ffff;
-  margin: 10px 0;
+  font: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .work-rules {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
+
 .rule {
-  flex-basis: 50%;
+  width: 50%;
   text-align: center;
+  margin: 30px 0;
   font-size: 20px;
   color: #fff;
-  margin-bottom: 70px;
 }
 
-/* transaction container */
+.rule span {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .workContainer {
+    align-items: center;
+    border: 3px solid black;
+  }
+  .work-rules {
+    display: block;
+  }
+  .rule {
+    width: 100%;
+    text-align: left;
+  }
+}
 
 .transaction-container {
-  max-width: 1440px;
   width: 100%;
-  height: 100vh;
-  margin: 0 auto;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.table,
-tr,
-td {
-  width: 1000px;
+.tableContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 10px;
   text-align: left;
+}
+
+tr,
+td {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .table tr {
   height: 30px;
 }
+
 .table tbody tr {
-  background-color: #ffff;
+  background-color: #fff;
 }
 
 .table thead {
@@ -316,38 +344,17 @@ td {
   background-color: #30de6f !important;
 }
 
-@keyframes rotateAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-
-/* footer container */
-
 .footer {
+  max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
   height: 50px;
-  position: sticky;
-  bottom: 50px;
   text-align: center;
+  position: sticky;
+  bottom: 0;
 }
 
 .footer p {
-  font-size: 20px;
-  color: #ffffff;
-}
-
-/* footer responsive */
-
-@media screen and (max-width: 767px) {
-  .footer {
-    bottom: 5px;
-  }
-
-  .footer p {
-    font-size: 16px;
-  }
+  color: #fff;
+  font-size: 16px;
 }
