@@ -1,9 +1,4 @@
 
-const toggle  = ()=>{
-
-}
-
-
 const bars = document.getElementById('bars');
 
 bars.addEventListener('click' , ()=>{
@@ -19,11 +14,3 @@ bars.addEventListener('click' , ()=>{
 
 })
 
-
-
-const navLink = document.querySelectorAll('.ul li a');
-console.log(navLink)
-
-navLink.forEach(links => {
-  return console.log(links)
-})
