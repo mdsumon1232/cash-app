@@ -342,8 +342,6 @@ td {
   margin: 0 auto;
   height: 50px;
   text-align: center;
-  position: sticky;
-  bottom: 0;
 }
 
 .footer p {
